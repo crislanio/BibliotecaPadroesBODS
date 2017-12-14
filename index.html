@@ -1,0 +1,556 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="img/favicons/favicon.ico">
+
+    <title>Bods - Biblioteca de Padrões</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+                <a class="navbar-brand" href="#" style="color:white;">BODs</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a data-toggle="tab" href="#home">Busca</a></li>
+                    <li><a data-toggle="tab" href="#menu1">Graficos</a></li>
+                    <li><a data-toggle="tab" href="#menu4">Feedback</a></li>
+                    <li><a data-toggle="tab" href="#menu5">Interface</a></li>
+                    <li><a data-toggle="tab" href="#menu6">Tabela</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="tab">
+        <ul class="nav nav-pills nav-stacked">
+            <li class="active"><a data-toggle="tab" href="#home">Busca</a></li>
+            <li><a data-toggle="tab" href="#menu1">Graficos</a></li>
+            <li><a data-toggle="tab" href="#menu4">Feedback</a></li>
+            <li><a data-toggle="tab" href="#menu5">Interface</a></li>
+            <li><a data-toggle="tab" href="#menu6">Tabela</a></li>
+        </ul>
+    </div>
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+            <div class="col-sm-9 col-md-9 col-xs-12 main mysection">
+                <div class="jumbotron">
+                    <h1>Biblioteca de Padrões</h1>
+                    <!-- <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p> -->
+                </div>
+
+                <!-- autocomplete -->
+                <div class="componente">
+                    <div class="page-header">
+                        <h1>Pesquisa com autocomplete</h1>
+                    </div>
+                    <div class="">
+                        <h4>Problema</h4>
+                        <p>Um dos problemas é a complexidade no momento da pesquisa, bem como a visualização dentre as várias opções disponíveis. Para diminuir a complexidade da consulta ela pode ser dada por vários atributos e não apenas um.</p>
+                    </div>
+                    <div class="">
+                        <h4>Solução</h4>
+                        <p>Resolvendo o problema da visualização, foi usado o autocomplete. Que faz a busca em todas as Hierarquias por parte da palavra já digitada.</p>
+                        <p>Digite uma parte da palavra ou frase desejada, visualize o autocomplete gerado e selecione sua opção.</p>
+                    </div>
+                    <div class="">
+                        <h4>Quando Usar</h4>
+                        <ul>
+                            <li>Use quando as sugestões de preenchimento automático podem ser retiradas de um conjunto de dados gerenciável em tamanho.</li>
+                            <li>Use quando a velocidade de entrada é um objetivo importante.</li>
+                            <li>Use quando a precisão da entrada é um objetivo importante.</li>
+                            <li>Use quando o número de itens seria muito grande ou inconveniente para exibir em uma caixa suspensa padrão.</li>
+                            <li><strong>Não use se você quiser fornecer ao usuário uma visão geral de todas as opções disponíveis ou se deseja filtrar por algo ou buscar algo em específico.</strong></li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <h4>Exemplo:</h4>
+                        <div class="">
+                            <img src="img/busca_autocomplete.png" alt="" class="img-responsive img-example">
+                        </div>
+                        <!-- /.col-lg-6 -->
+                    </div>
+                </div>
+                <!-- Busca Agregada -->
+                <div class="componente">
+                    <div class="page-header">
+                        <h1>Busca Agregada</h1>
+                    </div>
+                    <div class="">
+                        <h4>Problema</h4>
+                        <p>Problema é como poderia agrupar mais de uma instituição para a pesquisa.</p>
+                    </div>
+                    <div class="">
+                        <h4>Solução</h4>
+                        <p>A solução é esse componente com o auxílio da biblioteca de autocomplete. Esse componente une todos os resultados selecionados pelo autocomplete. Passando como parâmetro para a pesquisa.</p>
+                        <p>Selecione vários componentes para a pesquisa, fazendo agrupamentos como parâmetro.</p>
+                    </div>
+                    <div class="">
+                        <h4>Quando Usar</h4>
+                        <ul>
+                            <li>Use quando desejar montar uma hierarquia de acordo com os itens - órgão superior, órgão subordinado, unidade gestora, programa, ação, favorecido.</li>
+                            <li>Use quando deseje montar um histótico baseados nos itens - órgão superior, órgão subordinado, unidade gestora, programa, ação, favorecido.</li>
+                            <li>Use quando deseje retornar uma agregação baseada na busca feita.</li>
+                            <li><strong>Não use for importante visualizar o histórico dos gastos.</strong></li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <h4>Exemplo:</h4>
+                        <div class="">
+                            <img src="img/busca_agregada.png" alt="" class="img-responsive img-example">
+                            <!-- <h1><strong>?</strong></h1> -->
+                        </div>
+                        <!-- /.col-lg-6 -->
+                    </div>
+                </div>
+                <!-- /Conjunto de Pesquisa -->
+                <!-- Busca Hierárquica -->
+                <div class="componente">
+                    <div class="page-header">
+                        <h1>Busca Hierárquia</h1>
+                    </div>
+                    <div class="">
+                        <h4>Problema</h4>
+                        <p>Para montar uma hierarquia baseada em itens conectados é necessário uma forma de selecionar e montar essa hierarquia proposta.</p>
+                    </div>
+                    <div class="">
+                        <h4>Solução</h4>
+                        <p>Baseado na hierarquia na base de pagamentos que o órgão superior X possui um ou mais orgãos subordinados que por sua vez possui um ou mais unidades gestoras. Uma unidade gestora recebe dinheiro através de um ou mais programas que
+                            por sua vez é regido por um ou mais ações que tem como receptor um ou mais favorecido.</p>
+                    </div>
+                    <div class="">
+                        <h4>Quando Usar</h4>
+                        <ul>
+                            <li>Use quando desejar montar uma hierarquia de acordo com os itens - órgão superior, órgão subordinado, unidade gestora, programa, ação, favorecido.</li>
+                            <li><strong>Não use quando desejar ver um histórico temporal dos gastos de forma individual de algum item na hierarquia na base de pagamentos.</strong></li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <h4>Exemplo:</h4>
+                        <div class="">
+                            <img src="img/consulta_hierarquica.png" alt="" class="img-responsive img-example">
+                            <!-- <h1><strong>?</strong></h1> -->
+                        </div>
+                        <!-- /.col-lg-6 -->
+                    </div>
+                </div>
+                <!-- /Conjunto de Pesquisa -->
+            </div>
+            <!-- /.componente -->
+            <!-- /autocomplete -->
+        </div>
+        <div id="menu1" class="tab-pane fade">
+            <!-- Visualização dos Gráficos  -->
+            <div class="col-sm-9 col-md-9 main mysection">
+                <div class="componente">
+                    <div class="page-header">
+                        <h1>Visualização dos Gráficos</h1>
+                    </div>
+                    <div class="">
+                        <h4>Problema</h4>
+                        <p>O problema é a dificuldade na visualização dos diversos dados, como poderia ver de forma mais simples o conjunto desses dados volumosos.</p>
+                    </div>
+                    <div class="">
+                        <h4>Solução</h4>
+                        <p>A solução foi criar um mapa interativo, onde o usuário pode visualizar todos os gastos/dados de forma simples e rápida. Podendo também limitar o período para a visualização.</p>
+                        <p>Visualize o gráfico, para alterar o período basta clicar e arrastar nos limites do mapa.</p>
+                    </div>
+                    <div class="">
+                        <h4>Quando Usar</h4>
+                        <ul>
+                            <li>Use quando desejar ver os gastos de algum item na hierarquia na base de pagamentos de forma anual, ou mensal.</li>
+                            <li>Use quando desejar comparar gastos de forma mais direta entre diferente órgãos, programas ou ações.</li>
+                            <li><strong>Não use se desejar ver um montante anual de um orgão, unidade gestora, ação ou programa.</strong></li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <h4>Exemplo:</h4>
+                        <div class="">
+                            <img src="img/grafico.png" alt="" class="img-responsive img-example">
+                        </div>
+                        <!-- /.col-lg-6 -->
+                    </div>
+                </div>
+            </div>
+            <!-- /.componente -->
+            <!-- /Visualização dos Gráficos  -->
+        </div>
+
+        <div id="menu4" class="tab-pane fade">
+            <!-- Barra de carregamento -->
+            <div class="col-sm-9 col-md-9 main mysection">
+                <div class="componente">
+                    <div class="page-header">
+                        <h1>Barra de carregamento</h1>
+                    </div>
+                    <div class="">
+                        <h4>Problema</h4>
+                        <p>O problema é a não visualização das páginas e requisições, ou seja, determinada consulta está sendo processada, mas não tem como ver que a mesma ainda está sendo carregada.</p>
+                    </div>
+                    <div class="">
+                        <h4>Solução</h4>
+                        <p>A solução foi colocar uma barra de carregamento que mostra ao usuário do site que determinada tarefa está em execução ou em processamento. Mostrando assim de certa forma um feedback do que está acontecendo ao demorar responder
+                            uma requisição.</p>
+                        <p>Visualize a barra enquanto a requisição é completada e retornada.</p>
+                    </div>
+                    <div class="">
+                        <h4>Quando Usar</h4>
+                        <ul>
+                            <li>Use quando desejar informar um retorno ao usuário do que está acontecendo.</li>
+                            <li>Use quando uma consulta agregada demorar mais de 3 segundos.</li>
+                            <li><strong>Não use toda vez que gerar o resultado de uma consulta, mudança de páginas.</strong></li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <h4>Exemplo:</h4>
+                        <div class="">
+                            <img src="img/barra-loading.png" alt="" class="img-responsive img-example">
+                        </div>
+                        <!-- /.col-lg-6 -->
+                    </div>
+                </div>
+                <!-- modal -->
+                <div class="componente">
+                    <div class="page-header">
+                        <h1>Modal</h1>
+                    </div>
+                    <div class="">
+                        <h4>Problema</h4>
+                        <p>O problema quando o usuário faz algo não esperado ou que não é correto no contexto no sistema algo precisa ser feito e o usuário precisa ser informado de sua ação.</p>
+                    </div>
+                    <div class="">
+                        <h4>Solução</h4>
+                        <p>A solução foi apresentar para o usuário no momento que ele faz uma ação inesperada um modal informando uma mensagem com o que é preciso ser feito para completar a ação com sucesso.</p>
+                    </div>
+                    <div class="">
+                        <h4>Quando Usar</h4>
+                        <ul>
+                            <li>Use quando for necessário informar ao usuário, após uma ação indevida, uma mensagem informando o que é preciso ser feito.</li>
+                            <li><strong>Não use se desejar mostrar ou descrever como fazer uma ação ao usuário se ele tiver feito a ação de forma correta.</strong></li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <h4>Exemplo:</h4>
+                        <div class="">
+                            <img src="img/modal.png" alt="" class="img-responsive img-example">
+                        </div>
+                    </div>
+                </div>
+                <!-- /modal -->
+            </div>
+            <!-- /Barra de carregamento -->
+        </div>
+
+        <div id="menu5" class="tab-pane fade">
+            <div class="col-sm-9 col-md-9 main mysection">
+                <!-- Cards -->
+                <div class="componente">
+                    <div class="page-header">
+                        <h1>Cards</h1>
+                    </div>
+                    <div class="">
+                        <h4>Problema</h4>
+                        <p>Como apresentar vários itens numa interface sem listagem, de forma estilizada e organizada.</p>
+                    </div>
+                    <div class="">
+                        <h4>Solução</h4>
+                        <p>Buscando apresentar aos usuarios os órgãos superiores, órgãos subordinados, unidades gestoras, programas, ações ou favorecidos no retorno de um resultado de busca ou simplesmente na apresentação do item na hierarquia os cards retornam
+                            de forma estilizada e simples esse resultado.</p>
+                    </div>
+                    <div class="">
+                        <h4>Quando Usar</h4>
+                        <ul>
+                            <li>Use quando desejar mostrar ou filtrar um nome de um item na hierarquia.</li>
+                            <li>Use quando deseja retornar o resultado de uma consulta de forma não gráfica através de texto.</li>
+                            <li><strong>Não use para fazer comparações entre itens ou retonar uma informação de forma gráfica.</strong></li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <h4>Exemplo:</h4>
+                        <div class="">
+                            <img src="img/cards_inicio.png" alt="" class="img-responsive img-example">
+                        </div>
+                        <div class="" style="padding-top:30px;">
+                            <img src="img/cards_busca.png" alt="" class="img-responsive img-example">
+                        </div>
+                    </div>
+                </div>
+                <!-- /Cards -->
+                <!-- Fonts -->
+                <div class="componente">
+                    <div class="page-header">
+                        <h1>Fonts</h1>
+                    </div>
+                    <div class="">
+                        <h4>Problema</h4>
+                        <p>Como apresentar as informações, destacar o significado do texto sem chamar muita atenção para fonte</p>
+                    </div>
+                    <div class="">
+                        <h4>Solução</h4>
+                        <p>A fonte DokChampa possui aspecto simples, limpo, armonioso, intuitivo, destacando a informação e não o desenho da fonte em si.</p>
+                    </div>
+                    <div class="">
+                        <h4>Quando Usar</h4>
+                        <ul>
+                            <li>A fonte é utilizada em todo site, em textos, números, títulos, parágrafos, variando apenas no tamanho</li>
+                            <li><strong>Não use se um ícone ou uma imagem destacar melhor o significado de um elemento, ação em vês de forma textual.</strong></li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <h4>Exemplo:</h4>
+                        <div class="">
+                            <img src="img/fonts.jpg" alt="" class="img-responsive img-example">
+                        </div>
+                        <div class="fonts_exemplo">
+                            <div class="row">
+                                <div class="col-xs-4 left">
+                                    <h5 class="header">Header</h5>
+                                </div>
+                                <div class="col-xs-4 center">
+                                    <h5 class="header">23px</h5>
+                                </div>
+                                <div class="col-xs-4 right">
+                                    <h5 class="header">normal</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4 left">
+                                    <h5 class="menu">Menu</h5>
+                                </div>
+                                <div class="col-xs-4 center">
+                                    <h5 class="menu">18px</h5>
+                                </div>
+                                <div class="col-xs-4 right">
+                                    <h5 class="menu">normal</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4 left">
+                                    <h5 class="card">Card</h5>
+                                </div>
+                                <div class="col-xs-4 center">
+                                    <h5 class="card">14px</h5>
+                                </div>
+                                <div class="col-xs-4 right">
+                                    <h5 class="card">normal</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4 left">
+                                    <h5 class="button">Botão</h5>
+                                </div>
+                                <div class="col-xs-4 center">
+                                    <h5 class="button">14px</h5>
+                                </div>
+                                <div class="col-xs-4 right">
+                                    <h5 class="button">normal</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4 left">
+                                    <h5 class="body">Body</h5>
+                                </div>
+                                <div class="col-xs-4 center">
+                                    <h5 class="body">14px</h5>
+                                </div>
+                                <div class="col-xs-4 right">
+                                    <h5 class="body">normal</h5>
+                                </div>
+                            </div>
+                            <h5 class="header">Exemplo</h5>
+                            <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum vestibulum eros, sit amet euismod ante luctus id. Praesent sit amet aliquet dui. Nullam risus erat, fringilla sed feugiat non, vehicula sit amet purus.
+                                Nam tincidunt velit et nibh commodo efficitur.</p>
+                        </div>
+                        <!-- /.col-lg-6 -->
+                    </div>
+                </div>
+                <!-- /Fonts -->
+                <!-- Cores -->
+                <div class="componente">
+                    <div class="page-header">
+                        <h1>Paleta de Cores</h1>
+                    </div>
+                    <div class="">
+                        <h4>Problema</h4>
+                        <p>Se tratando de acessibilidade, serviço ou ferramenta séria, é necesssário destacar o aspecto visual através de cores e elementos gráficos, textuais, contudo as cores podem retratar, destacar as informações de uma melhor forma. Quais cores são necessárias para que uma boa parte da população que possui algum tipo de deficiência visual ou daltonismo possa entender o que a ferramenta quer passar e não se perder no aspecto visual da ferramenta.</p>
+                    </div>
+                    <div class="">
+                        <h4>Solução</h4>
+                        <p>Foi feito um estudo em que foi observado as principais cores que diferentes níveis de daltonismo enxerga, chegando na paleta de cores em destaque abaixo no exemplo.</p>
+                    </div>
+                    <div class="">
+                        <h4>Quando Usar</h4>
+                        <ul>
+                            <li>Use cada cor em diferentes contrastes como fundo cinza, o verde mais escuro paraa cards, botões, textos, branco para nome do texto dentro dos botões, verde mais claro para cabeçalho, rodapé.</li>
+                            <li><strong>Não use as cores mais claras para dá mais destaque e cores mais fortes como fundo para perder um contraste mais adequado</strong></li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <h4>Exemplo:</h4>
+                        <div class="paleta_cores">
+                            <div class="row">
+                                <div class="col-xs-6 box cor1">
+                                    <div class="box_text">
+                                        <span>#3f7575</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 box cor2">
+                                    <div class="box_text">
+                                        <span>#90b5b5</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6 box cor3">
+                                    <div class="box_text">
+                                        <span>#eeeeee</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 box cor4">
+                                    <div class="box_text">
+                                        <span>#fff</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.col-lg-6 -->
+                    </div>
+                </div>
+                <!-- /Cores -->
+                <!-- Pagination -->
+                <div class="componente">
+                    <div class="page-header">
+                        <h1>Pagination</h1>
+                    </div>
+                    <div class="">
+                        <h4>Problema</h4>
+                        <p>O retorno de uma consulta pode ser grande muitas vezes, sendo assim é necessário uma forma de não deixar uma página extensa e além disso fazer com que o usuário tenha um retorno do que é procurado mais rápido. </p>
+                    </div>
+                    <div class="">
+                        <h4>Solução</h4>
+                        <p>A paginação retorna ao usuário os resultados em parte, podendo ele avançar para outras páginas com os resultados da pesquisa de forma sequencial ou simplesmente ir para a primeira ou última página contendo os resultados da pesquisa.</p>
+                    </div>
+                    <div class="">
+                        <h4>Quando Usar</h4>
+                        <ul>
+                            <li>Use quando o resultado de uma consulta é grande.</li>
+                            <li>Use quando desejar destacar alguns resultados dentre muitos outros.</li>
+                            <li><strong>Não use se o resultado retornado por uma consulta é sempre pequeno, e o conteúdo retornado
+                              é disposto em uma página sem necessidade do usuário fazer muito esforço para ler todo conteúdo.</strong></li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <h4>Exemplo:</h4>
+                        <div class="">
+                            <img src="img/pagination.png" alt="" class="img-responsive img-example">
+                        </div>
+                    </div>
+                </div>
+                <!-- /Pagination -->
+            </div>
+
+        </div>
+        <!-- ./col -->
+
+        <div id="menu6" class="tab-pane fade">
+            <div class="col-sm-9 col-md-9 main mysection">
+                <!-- Cards -->
+                <div class="componente">
+                    <div class="page-header">
+                        <h1>Tabela</h1>
+                    </div>
+                    <div class="">
+                        <h4>Problema</h4>
+                        <p>Quando é preciso dispor as informações de forma lado a lado, mostrar ligações ou agrupamentos é preciso dispor tais informações de uma forma simples e intuitiva.</p>
+                    </div>
+                    <div class="">
+                        <h4>Solução</h4>
+                        <p>Através de tabelas dispomos as informações mais relevantes agrupadas além de acrescentá-las em um só local.</p>
+                    </div>
+                    <div class="">
+                        <h4>Quando Usar</h4>
+                        <ul>
+                            <li>Use quando necessite juntar vários resultados de pesquisas de forma agrupada e lado a lado.</li>
+                            <li><strong>Não use se os resultados podem ser melhor visualizados de forma individual e gráfica, ou que não muitas agregações de resultados para serem dispostas
+                              em diversos atributos.</strong></li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <h4>Exemplo:</h4>
+                        <div class="">
+                            <img src="img/tabela.png" alt="" class="img-responsive img-example">
+                        </div>
+                    </div>
+                </div>
+                <!-- /Cards -->
+
+
+            </div>
+            <!-- ./col -->
+        </div>
+        <!-- /tab-content -->
+
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <!-- JQUERY -->
+        <script type="text/javascript">
+            $(document).ready(function() {
+                openCity();
+            });
+
+            function openCity(evt, cityName) {
+                // Declare all variables
+                var i, tabcontent, tablinks;
+
+                // Get all elements with class="tabcontent" and hide them
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+
+                // Get all elements with class="tablinks" and remove the class "active"
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+
+                // Show the current tab, and add an "active" class to the link that opened the tab
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+        </script>
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
